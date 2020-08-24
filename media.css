@@ -7,11 +7,95 @@
 	.meny{
 	display: flex;
 	padding:16px 0px;
+	justify-content: space-around;
+	
 }
 .meny ul{
 display: none;
-margin-left: 280px;
 }
+
+.mobile_meny{
+	display:none;
+}
+.mobile_meny_active{
+	position:absolute;
+	margin-top:58px;
+	padding-top:10%;
+	background-color:rgba(100,0,100,.7);
+	color:white;
+	width:60%;
+	height:300px;
+	transition: transform 1s linear;
+}
+.mobile_meny_active li{
+	display: flex;
+	transition: transform 1s linear;
+	flex-direction:column;
+	text-align:center;
+	padding-top:10px;
+}
+.burger{
+	display:block;
+	position:relative;
+	margin-top:15px;
+	height:3px;
+	width:30px;
+	background-color:white;
+	transition: background-color 2s linear;
+	transition: transform 1s linear;
+}
+.burger::before{
+	position:absolute;
+	display:block;
+	content:'';
+	margin-top:10px;
+	height:3px;
+	width:30px;
+	background-color:white;
+	transition: background-color 2s linear;
+	transition: transform 2s linear;
+}
+.burger::after{
+	position:absolute;
+	display:block;
+	content:'';
+	margin-top:-10px;
+	height:3px;
+	width:30px;
+	background-color:white;
+	transition: background-color 2s linear;
+	transition: transform 2s linear;
+}
+.burger.burger_active{
+	display:block;
+	position:relative;
+	height:5px;
+	width:30px;
+	background-color:blue;
+	transform: rotate(90deg);
+
+}
+.burger.burger_active::before{
+	position:absolute;
+	display:block;
+	content:'';
+	height:5px;
+	width:30px;
+	background-color:blue;
+
+}
+.burger.burger_active::after{
+	position:absolute;
+	display:block;
+	content:'';
+	height:5px;
+	width:30px;
+	background-color:blue;
+
+}
+
+
+
 .dop_text-our{
 line-height:20px;
 color:#817f86;
@@ -71,7 +155,7 @@ margin:0px auto;
 }
 .blok3{
 	background-attachment:fixed;
-	background-image:url("img/overlay.png");
+	background-image:url("/img/overlay.png");
 	background-size:cover;
 }
 .blok4{
@@ -141,9 +225,9 @@ font-size:12px;
 }
 .avatar{
 
-	perspective:1000px;
+	perspective:500px;
 	border-radius:50%;
-	margin:0px 10px;
+	margin:0px 15px;
 	width:30px;
 	height:30px;
 }
@@ -169,11 +253,11 @@ font-size:12px;
 }
 .avatar{
 
-	perspective:800px;
+	perspective:100px;
 	border-radius:50%;
-	margin:0px 16px;
-	width:8px;
-	height:8px;
+	margin:0px 23px;
+	width:5px;
+	height:5px;
 }
 	.blok6{
 	background-attachment:fixed; 
@@ -186,13 +270,13 @@ font-size:12px;
 width:80px;
 }
 .left_btn{
-	display:none;
-	margin:30px 15px;
+
+	margin:30px 3px;
 
 }
 .right_btn{	
-	display:none;
-	margin:30px 25px;
+
+	margin:30px 3px;
 }
 .blok7{
 	
